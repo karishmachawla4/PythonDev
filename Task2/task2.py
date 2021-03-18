@@ -99,11 +99,31 @@ def check_input(user_input):
 import random
 number = int(input(" Guess the lucky number between 1 - 10: "))
 lucky = random.randint(1, 10)
-while number != "lucky":
+while True:
         if lucky == number:
             print("You guess it right")
+            break
         else:
+            print("You have not guess")
+            answer = input("Would you like to try again , say yes or no: ")
+            if answer == "no":
+                break
             number = int(input(" Guess the lucky number between 1 - 10: "))
+
+
+#### 10 Guess the number
+counter  = 1
+lucky = random.randint(1, 10)
+while counter <= 5:
+    number = int(input(" Guess the lucky number between 1 - 10: "))
+    if number == lucky:
+        print("Good Guess")
+    else:
+        print("Try again")
+    counter = counter + 1
+print("Game over")
+
+
 
 
 
