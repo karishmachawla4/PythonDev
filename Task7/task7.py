@@ -11,4 +11,12 @@ D = int(input("Enter the value"))
 
 print(square_root(D))
 
-###
+###2 class and subclass
+class Shape:
+    def setArea(self):
+        self.area = 0
+
+
+class Square:
+    def __init__(self,len):
+        self.len = len
